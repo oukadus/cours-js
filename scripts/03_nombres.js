@@ -69,3 +69,18 @@ let k = 1;
 let l = ++k;
 console.log(l);
 console.log(k);
+
+// Exercice 1
+// Récupérez dans un prompt la valeur souhaitée par l'utilisateur
+
+let resultat;
+resultat = prompt("entez votre valeur :");
+document.write(resultat);
+
+let valeurCarre = resultat * resultat;
+
+let valeurCube = resultat * resultat * resultat;
+alert(
+  `La vleur au carré est de : ${valeurCarre} et la valeur cube est de : ${valeurCube}`
+);
+console.clear();
