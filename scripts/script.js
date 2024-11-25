@@ -11,7 +11,6 @@
 
 // 1. String
 /*
-
     const mystring = "double quote";
     const mystring2 = "single quote";
     const mystring3 = `back-tick`;
@@ -52,10 +51,18 @@
 // if = si
 // else = sinon
 
-const MYAGE = 14;
+const MYAGE = 5;
+let ageNecessary = 18 - MYAGE;
+console.log(ageNecessary);
 
-if (MYAGE > 18) {
-  console.log("IF TRUE");
+if (MYAGE >= 18) {
+  console.log(`Vous êtes Majeur`);
 } else {
-  console.log("ELSE FALSE");
+  console.log(
+    `Vous n'êtes pas encore majeur il vous manque ${ageNecessary} ans`
+  );
+
+  console.log("hello world");
 }
+
+alert("test0");
