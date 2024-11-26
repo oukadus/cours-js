@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+</head>
+
+<body>
+
+    <script>
+        // 1ère façon
+        let monTableau = [];
+        console.log(monTableau);
+        // 2ème façon 
+        let myArray = new Array;
+        console.log(myArray);
+        // myArray et monTableau sont des tableaux qui peuvent contenir plusieurs informations.  
+        // Affecter des valeurs au tableau, plusieurs méthodes : 
+        // a) - 
+        let nosPrenoms = ["Andrei", "Roger", "Hawa", "Islem"];
+        // Afficher toutes les données de mon tableau 
+        console.log(nosPrenoms);
+        // Les tableaux commencent par l'index 0 
+
+        // b) - 
+        monTableau[0] = "Yacine";
+        monTableau[1] = "Fayçal";
+        monTableau[2] = "Ouarda";
+        monTableau[3] = "Alpha";
+        monTableau[4] = "Delma";
+        monTableau[10] = "Andréa";
+
+        // Afficher le tableau 
+        console.clear()
+        console.log(monTableau);
+        // Afficher Ouarda 
+        console.log(monTableau[2]);
+        console.log(monTableau[5]);
+
+        // On va créer deux tableaux indexés  
+        let listDePrenoms = ["Kader", "Alexandre", "Bashir"];
+        let listDeNoms = ["Ounadjela", "Graziani", "Youcif"];
+
+        // On crée un tableau contenant les deux autres tableaux
+        let annuaire = [listDePrenoms, listDeNoms];
+
+        // annuaire est un tableau  
+        console.log(annuaire);
+        document.write(annuaire + '<br>')
+        document.write('<h1>' + annuaire[0][0] + ' ' + annuaire[1][0] + '</h1>');
+        document.write('<h1>' + annuaire[0][1] + ' ' + annuaire[1][1] + '</h1>');
+        document.write('<h1>' + annuaire[0][2] + ' ' + annuaire[1][2] + '</h1>');
+
+        // Ceci est un Tableau Indexé Multidimensionnel
+
+        // --------------------------------------------------------------
+
+        let tableau = [
+            // 0 
+            [
+                // 0      // 1    // 2
+                'prenom', 'nom', 'tel'
+            ],
+            // 1 
+            [
+                // 0      // 1          // 2
+                'Yacine', 'Djediden', '06010406'
+            ]
+
+        ];
+        console.clear()
+        console.log(tableau);
+
+        document.write(`
+        <ul>
+            <li><strong>Nom</strong> : ${tableau[1][1]}</li>
+            <li><strong>Prénom</strong> : ${tableau[1][0]}</li> 
+            <li><strong>Téléphone</strong> : ${tableau[1][2]}</li>
+        </ul>
+        `)
+
+        let coordonnées = {
+            prenom: "Mamadou",
+            nom: "Amadou",
+            age: "26",
+            tel: "0605807896"
+
+        };
+
+        console.log(coordonnées['prenom']);
+        console.log(coordonnées.prenom); // Meilleure méthode
+
+
+
+
+    </script>
+</body>
+
+</html>
