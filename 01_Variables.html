@@ -4,10 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <!-- Utilisation d'un document externe avec une extention .js dans le head en utilisant l'attribut "defer" -->
-    <script src="./scripts/02_types.js" defer></script>
-    <title>Variables</title>
+    <title>Les variables en JavaScript</title>
+    <!-- <script src="script.js" defer></script> -->
 </head>
 
 <body>
@@ -15,52 +13,56 @@
     <h1>Les variables en JavaScript</h1>
 
 
-    <!-- <script>
-        // commentaire javascript sur une seule ligne 
+    <!-- La balise "<script></script>" direct dans le documment HTML  -->
 
+    <script>
+        // Commentaire en JavaScript pour une seul ligne (//)
         /*
-            Commentaire sur un bloc de text
+            Commentaire pour un bloc de texte
             sur plusieurs lignes
+        
         */
 
-        // ***************** VARIABLES **********************
+
+        // ******** VARIABLES ***********
         /*
-            Les variables sont comme des boites que vous pouvez y stocker ce que vous souhaitez
+            Les variables sont comme des boites.
+            Vous pouvez y stocker ce que vous souhaitez.
+            On initialise une variable avec son nom (de votre choix)
+            Puis on lui attribue une valeur.
+            Pour déclarer une variable on utilise un préfix : const, let ou var
 
-            On initialise une variable avec son nom (de vôtre choix) 
-            Puis on lui attribue une valeur. 
-            
-            Pour déclarer une variable, on utilise un préfix : let ou const (le préfix var est obselète)
+            ATTENTION : on utilise les préfix seulement lors de l'initialisation
+            Var : façon obselète
+        
+        */
 
-            ATTENTION : on utilise les préfix seulement lors de l'initialisation des variables. 
-         */
-
-        //  la déclaration "const" permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réafectations ultérieures.  Une constant ne peux pas être déclarée à nouveau.
-
-        // Dans la convention, on écrit les noms des constantes en majuscules afin de les reconnaître.
-
-        const TEST = "Hello World"
+        // La déclaration "const" permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réaffectations ultérieurs. Une constante ne peut pas être déclaré à nouveau.
+        // Dans la convention, on écrit les constantes en majuscule pour les reconnaitre.
+        const TEST = "Hello World";
+        // console.log(TEST);
+        // TEST = "Bonjour";
         // console.log(TEST);
 
         let test2 = "Colombbus";
         // console.log(test2);
 
-        test2 = "10MentionWeb"
+        test2 = "10MentionWeb";
         // console.log(test2);
 
         let test3;
-        test3 = "Bientôt on mange"; // Après avoir déclaré une variable avec let, il n'est plus nécessaire d'utiliser le préfix
+        test3 = "Bientôt on mange";
         // console.log(test3);
+        
+        // Avec le prefix ou le mot clé "let" je peux changer la valeur de ma variable
+        
+        
+        
 
-        // on ne commence jamais une variable ou constante avec un chiffre ou un caractère spécial. 
+    </script>
 
-
-
-
-
-    </script> -->
-    <!-- Utilisation d'un document externe avec une extention .js -->
-    <!-- <script src="./scripts/index.js"></script> -->
+    <!-- Utilisation d'un document externe avec une extention ".js" -->
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
