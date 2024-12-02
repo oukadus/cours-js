@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions & Opérateurs de comparaison</title>
+</head>
+
+<body>
+
+    <h1>Hello World !</h1>
+
+    <script>
+
+        const HR = '<hr>';
+
+        // Opérateurs de comparaison 
+        document.write(`<h2> Opérateurs de comparaison</h2>`)
+        /*
+         > strictement supérieur 
+         < strictement inférieur  
+         >= supérieur ou égale
+         <= inférieur ou égale
+         == comparaison de VALEUR (permet de vérifier que des VALEURS de deux variables sont identiques)
+         === comparaison de VALEUR et de TYPE (Strictement égale à) | Il permet de vérifier la VALEUR et le TYPE
+         != différent de, en VALEUR 
+         !== strictement différent de, VALEUR et TYPE
+         */
+
+        let nbr1, nbr2;
+        nbr1 = 1;
+        nbr2 = 2;
+        let br = "<br>"
+
+        document.write(nbr1 > nbr2, br); // false
+        document.write(nbr1 < nbr2, br); // true
+        document.write(nbr1 >= nbr2, br); // false 
+        document.write(nbr1 <= nbr2, br); // true
+
+        let nbr3 = 1;
+        let nbr4 = '1';
+
+        document.write(nbr3 == nbr4, br); // true
+        document.write(nbr3 === nbr4, br); // false
+
+        // Opérateurs logiques 
+        document.write(`<h2> Opérateurs logiques</h2>`);
+
+        /*
+        opérateurs logiques
+        AND ->  &&
+        OR -> ||
+        NOT -> !
+        */
+
+        document.write('<h3>AND &&</h3>')
+
+        document.write(true && true, br); // true
+        document.write(true && false, br); // false 
+
+        document.write(false && false, br); // false 
+
+        /*
+       (A) && (B)
+       => si A est FAUX "ET" B est vrai ça implique que le résultat est FAUX 
+          si A est VRAI "ET" B est faux ça implique que le résultat est FAUX 
+          si A est FAUX "ET" B est FAUX ça implique que le résultat est FAUX 
+          si A est VRAI "ET" B est VRAI ça implique que le résultat est VRAI 
+       */
+
+        document.write('<h3>OR ||</h3>');
+        // Opérateur OR évalue que le résultat est TRUE si au moins une expression est TRUE. Si les deux expréssions sont FALSE alors le résultat sera False. 
+
+
+        document.write(false || false, br); // false 
+        document.write(false || false, br); // false 
+        document.write(false || false, br); // false 
+
+
+        /*
+         (C) && (D)
+         => si C est FAUX "OU" D est faux ça implique que le résultat est FAUX 
+            si C est VRAI "OU" D est faux ça implique que le résultat est VRAI 
+            si C est FAUX "OU" D est VRAI ça implique que le résultat est VRAI
+            si C est VRAI "OU" D est VRAI ça implique que le résultat est VRAI 
+         */
+
+
+        document.write('<h3>NOT !</h3>');
+        // Opérateur NOT -> ! Il transforme ce qui est TRUE en FALSE et ce qui est FALSE en TRUE 
+
+        document.write(!true, br); // false 
+        document.write(!false, br); // true 
+
+        document.write(`<h2>Structures conditionnelles if, else, else if</h2>`);
+
+        // ----------------------------------------------
+        // SYNTAXE  
+        // ---------------------------------------------
+
+        // if (condition1) {
+
+        //     // code exécuté si la condition est vrai. 
+
+        // } else {
+
+        //     // code exécuté si la condition est fausse.
+
+        // }
+
+        // if (condition) {
+
+        //     // code exécuté si la condition est vrai. 
+
+        // } else if (condition2) {
+
+        //     // code exécuté si la condition 2 est vrai.
+
+        // } else {
+
+        //     // code exécuté si toutes les autres conditions sont fausses.
+
+        // }
+
+        // if (condition1) {
+
+        //     // code exécuté si la condition est vrai. 
+
+        // }
+
+        // ----------------------------------------------
+        // Exemples 
+        // ---------------------------------------------
+
+        let a, b, c;
+        a = 10; b = 5; c = 2;
+
+        if (a > b) { // si a est supérieur à b -> si cette condition est TRUE alors rentre ce bloc et exécute le code 
+            document.write(`
+            <p><em>a</em> est bien supérieur à <em>b</em></p>
+            `);
+
+        } else { // sinon dans tous les autres cas, tu exécute ce code
+            document.write(`
+            <p><em>a</em> est bien inférieur ou égale à <em>b</em></p>
+            `);
+
+        };
+
+        // if avec AND (&&) 
+
+        if ((a > b) && (b > c)) { // true && true
+            document.write(`
+            <p>OK pour les deux conditions</p>
+            `)
+        } else {
+            document.write(`
+            <p>Une de ces deux conditions ou les deux sont fausses</p>
+            `)
+        }
+
+        // if avec OR (||) 
+
+        if ((a == 9) || (b < 9)) { // false || true
+            document.write(`
+            <p>OK pour au moins une condition</p>
+            `)
+        } else {
+            document.write(`
+            <p>Les deux conditions sont fausses</p>
+            `)
+        }
+
+
+        // if / else if / else 
+
+        if (a == 8) { // false
+
+            document.write(`
+            <p>a est égale à 8</p>
+            `)
+
+        } else if (a != 10) { // false
+
+            document.write(`
+            <p>a est différent de 10</p>
+            `)
+
+        } else {
+
+            document.write(`
+            <p>Tout le monde a faux</p>
+            `)
+
+        }
+
+        // ----------------------------------------------
+        // Exemples 
+        // ---------------------------------------------
+
+        if (a == 10) { // true
+
+            document.write(`
+            <p>a est égale à 10</p>
+            `)
+
+        } else if (a > b) { // true
+
+            document.write(`
+            <p>a est supérieur à b</p>
+            `)
+
+        } else {
+
+            document.write(`
+            <pTout le monde a faux</p>
+            `)
+
+        }
+
+        document.write(HR);
+
+        // avec que des if, les conditions sont toutes executés. Si condition trufy, le résultat est affiché. 
+
+        if (a == 10) { // true
+
+            document.write(`
+            <p>a est égale à 10</p>
+            `)
+
+        }
+
+        if (a > b) { // true
+
+            document.write(`
+            <p>a est supérieur à b</p>
+            `)
+
+        }
+
+        if (a < b) { // true
+
+            document.write(`
+            <p>a est inférieur à b</p>
+            `)
+
+        };
+
+        document.write(HR);
+
+        // if avec une variable false 
+        let test = 3 < 1; //false 
+        document.write(test);
+
+        // if (!test) {
+        //     Document.write("j'execute du code")
+        // } else {
+        //     document.write('code')
+        // };
+
+
+        document.write('<h3>Conditions ternaires</h3>');
+
+        // Une condition ternaire nous permet de faire une vérification mais sur une seule ligne 
+
+        let meteo = 'pluie';
+        document.write(meteo)
+        document.write((meteo == 'pluie') ? "<p>Prends un parapluie</p>" : "<p> Mets un short</p>");
+
+        // est-ce que meteo est égale à pluie ? IF oui, prends un parapluie : ELSE Mets un short
+
+        let monAge = prompt('Vôtre âge ?');
+        let isMajor;
+        isMajor = (monAge >= 18) ? '<p>Vous êtes majeur</p>' : '<p>Vous n\'êtes pas majeur</p>';
+        document.write(isMajor);
+
+        document.write(HR);
+
+        // age < 13 => Rentres chez toi petit 
+        // age < 18 => Tu n'as pas le droit de boire   
+        // age >= 18 => Tu as le droit de boire
+
+        let droitBoire;
+        droitBoire = (monAge < 13) ? 'Rentres chez toi petit' : (monAge < 18) ? "tu n'as pas le droit de boire" : "Tu as le droit de boire";
+
+        document.write(droitBoire);
+
+
+    </script>
+
+</body>
+
+</html>

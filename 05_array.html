@@ -93,6 +93,154 @@
         console.log(coordonnées.prenom); // Meilleure méthode
 
 
+        // Tableau multidimensionnel à 2 dimensions 
+
+        let contact = [
+            { prenom: 'Andrea', nom: 'Leo', telephone: '0787354590' },
+            { prenom: 'Hawa', nom: 'Kone', telephone: '0779684532' },
+            { prenom: 'Alexandre', nom: 'Cavet', telephone: '06595234' }
+        ];
+
+        console.log(contact);
+        console.log(contact[1].prenom);
+
+        // Tableau multidimensionnel à 4 dimensions 
+
+        let array4D = [
+            {
+                prenom: 'Roger',
+                nom: 'Davies',
+                coordonnées: {
+                    email: 'roger.davies@colombbus.org',
+                    tel: {
+                        fixe: '0143356792',
+                        fax: '0145343967',
+                        port: {
+                            prive: '0645923233',
+                            pro: '0646778833'
+                        }
+                    },
+                    adresse: {
+                        ville: 'Paris',
+                        cp: '75010',
+                        pays: {
+                            code: 'FR',
+                            nom: 'France'
+                        }
+                    }
+                }
+            }
+        ];
+
+        console.log(`
+        Nom : ${array4D[0].nom} 
+        Prénom : ${array4D[0].prenom} 
+        Numéro portable privé : ${array4D[0].coordonnées.tel.port.prive}
+        Pays : ${array4D[0].coordonnées.adresse.pays.nom} (${array4D[0].coordonnées.adresse.pays.code})
+        `);
+
+        // -------------------------------------------------
+        // Les Propriétés des tableaux 
+        //------------------------------------------------- 
+
+        let couleurs = [
+            'rouge', 'vert', 'bleu'
+        ];
+
+        // Je stock la longueur du tableau "Couleurs" dans une variable;
+        // console.log(couleurs.length);
+
+        let longueurTableau = couleurs.length;
+        // console.log('la longueur du tableau Couleurs est de ' + longueurTableau);
+
+        // length est une propriété qui affiche le nombre d'éléments d'un tableau. 
+
+        //----------------------------------------------
+        // Les Méthodes des tableaux 
+        //---------------------------------------------- 
+
+        // Pour ajouter un élément en fin de mon tableau, j'utilise la méthode "push" 
+
+        couleurs.push('violet');
+        console.log(couleurs);
+        console.log(couleurs.length);
+
+        // Pour retirer le dernier élément de mon tableau, j'utilise la méthode "pop()"
+
+        couleurs.pop();
+        console.clear()
+        console.log(couleurs);
+        console.log(couleurs.length);
+
+        // Pour ajouter un ou des éléments en début de tableau, j'utilise la méthode "unshift()" 
+
+        couleurs.unshift('violet', 'magenta');
+        console.log(couleurs);
+
+        // Pour ajouter, supprimer ou remplaer des ééments n'importe où dans un tableau, j'utilise la méthode "splice()"
+        // La méthode "Splice()" prends 3 arguments
+        /* 
+        - Position de départ : à partir d'où commence le changement 
+        - le nombre d'éléments à remplacer ou enlever 
+        - les éléments à ajouter au tableau  
+        */
+
+        // ['violet', 'Magenta', 'rouge', 'vert', 'bleu']
+
+        couleurs.splice(1, 0, 'cyan', 'indigo');
+        console.log(couleurs);
+        couleurs.splice(2, 1, 'orange');
+        console.log(couleurs);
+        console.clear
+
+        let sevenDays = [
+            'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'
+        ];
+
+        let workDays10MW = sevenDays.slice(0, 5);
+        let weekend = sevenDays.slice(5);
+        workDays10MW.splice(2, 1);
+
+        console.log(workDays10MW);
+        console.log(weekend);
+
+        //Pour choisire le separateur entre les éléments, j'utilise la méthode "join()" qui retourne une chaine de caractères, crée en concaténant les différentes valeurs d'un tableau 
+
+        let contactCouleur = couleurs.join(' - '); // C'est impératif de stocker la chaine de caractère dans une autre variable 
+        console.log(contactCouleur);
+        document.write(` ${contactCouleur}`);
+
+
+        // Les Types de valeurs primitives 
+        // String 
+        // Number 
+        // Boolean 
+        // Undefined 
+        // null 
+        // bigint 
+        // Symbol 
+
+        // Les types de valeurs objet
+        // Array 
+        // Object  
+
+        // Pour déterminer si un tableau contien une valeur précise, j'utilise la méthode "incluedes()" et je passe la veleur recherchée en argument de la méthode. 
+
+        let langages = ['HTML', 'CSS', 'JS'];
+        let verif = langages.includes('CSS');
+        console.log(verif); // true 
+        console.log(typeof verif); // boolean 
+        console.log(typeof langages); // object 
+
+
+        // Pour fusionner udifférents tableaux entre eux afin d'en créer un nouveau, j'utilise la méthode "concat()"
+        let totalTableau = langages.concat(couleurs, monTableau, array4D);
+        console.log(totalTableau);
+
+
+
+
+
 
 
     </script>
