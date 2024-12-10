@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices JS</title>
+</head>
+
+<body>
+
+    <script>
+
+        let prenom = 'Kader';
+        let age = 40;
+        let estEtudiant = true;
+
+        console.log(`Mon prénom est ${prenom}, J'ai ${age} ans, Je suis étudiant : ${estEtudiant}`);
+
+        let nom = 'Doe';
+        let nombre = 25;
+        let isAdmin = false;
+        let notes = [10, 15, 20]
+
+        console.log(
+            typeof nom,
+            typeof nombre,
+            typeof isAdmin,
+            typeof notes
+        );
+
+        // STRINGS
+
+        let phrase = 'Apprendre JavaScript est amusant !';
+        console.log('La longueur de la phrase est de ' + phrase.length);
+        console.log(phrase.toUpperCase());
+
+        console.log(phrase.replace('amusant', 'facile'));
+
+
+        // NUMBERS
+
+        let a;
+        let b;
+        a = 10; b = 3;
+
+        console.log('Somme :' + a + b);
+        console.log('Produit :' + a * b);
+        console.log('Division :' + a / b + ' Modulo :' + a % b);
+
+
+
+        // ARRAYS
+
+        let fruits = ['pomme', 'banane', 'cerise'];
+        console.log(fruits);
+
+        fruits.push('orange');
+
+        console.log(fruits);
+
+        fruits.shift();
+
+        console.log(fruits.length);
+
+        console.log(fruits);
+
+
+        // CONDITIONS 
+
+        // let monAge;
+        // monAge = prompt('Quel est votre âge ?');
+
+        // if (monAge >= 18) {
+        //     alert('Vous êtes Majeur !')
+        // } else {
+        //     alert('Vous êtes Mineur !')
+        // }
+
+
+        // CALCULATRICE
+
+        // let nombre1;
+        // let nombre2;
+        // let operateur;
+
+        // nombre1 = parseFloat(prompt('Quel votre premier nombre ?'));
+        // nombre2 = parseFloat(prompt('Quel votre deuxième nombre ?'));
+        // operateur = prompt('Quelle opération souhaitez vous');
+
+
+        // if (isNaN(nombre1) || isNaN(nombre2)) {
+        //     alert('Veuillez entrer un nombre valide !')
+        // } else if ((operateur !== '+') && (operateur !== '-') && (operateur !== '*') && (operateur !== '/') && (operateur !== '%')) {
+        //     alert('Veuillez entrer un opérateur valide !')
+        // } else if ((operateur == '+')) {
+        //     alert("Le résultat de " + nombre1 + " + " + nombre2 + " est " + (nombre1 + nombre2))
+        // } else if ((operateur == '-')) {
+        //     alert("Le résultat de " + nombre1 + " - " + nombre2 + " est " + (nombre1 - nombre2))
+        // } else if ((operateur == '*')) {
+        //     alert("Le résultat de " + nombre1 + " * " + nombre2 + " est " + (nombre1 * nombre2))
+        // } else if ((operateur == '/')) {
+        //     alert("Le résultat de " + nombre1 + " / " + nombre2 + " est " + (nombre1 / nombre2))
+        // } else if ((operateur == '%')) {
+        //     alert("Le résultat de " + nombre1 + " % " + nombre2 + " est " + (nombre1 % nombre2))
+        // }
+
+
+        // Deviner le bon nombre
+
+        // const NOMBRESECRET = 6;
+        // let justePrix;
+        // justePrix = parseFloat(prompt('Tentez de devinez le bon numéro entre 1 à 10'));
+
+        // if (isNaN(justePrix)) {
+        //     alert('Veuillez entre un nombre valide')
+        // } else if (justePrix > NOMBRESECRET) {
+        //     alert('Trop grand !')
+        // } else if (justePrix < NOMBRESECRET) {
+        //     alert('Trop petit !')
+        // } else {
+        //     alert('Bravo vous avez trouvé le nombre !')
+        // }
+
+        // Switch note
+
+        // let note;
+        // note = parseFloat(prompt('Quelle est votre note ? '));
+
+        // if (isNaN(note)) {
+        //     alert('Note invalide !');
+        // } else {
+        //     switch (true) {
+        //         case ((note >= 0) && (note <= 10)):
+        //             alert('Insuffisant');
+        //             break
+        //         case ((note > 10) && (note < 15)):
+        //             alert('Passable');
+        //             break
+        //         case ((note >= 15) && (note <= 17)):
+        //             alert('Bien !');
+        //             break
+        //         case ((note > 17) && (note <= 20)):
+        //             alert('Excellent !');
+        //             break
+        //         default:
+        //             alert('Note invalide !');
+        //     }
+        // }
+
+
+        // SWITCH PLATS
+
+        // let plat;
+        // plat = prompt('Quel est votre plat préféré (Pizza, Sushi, Steak, Salade)').toLocaleLowerCase();
+
+
+        // switch (true) {
+        //     case (plat == 'pizza'):
+        //         alert('Un excellent choix pour les amateurs de fromage');
+        //         break
+        //     case (plat == 'sushi'):
+        //         alert('Une option saine et délicieuse');
+        //         break
+        //     case (plat == 'steak'):
+        //         alert('Excellent pour les amateurs de viande');
+        //         break
+        //     case (plat == 'salade'):
+        //         alert('Un choix équilibré et leger');
+        //         break
+        //     default:
+        //         alert('Je ne connais pas ce plat');
+        // }
+
+        // SWITCH COULEURS
+
+        // let monAge;
+        // let maCouleur;
+        // monAge = prompt('Quel est vôtre âge ?');
+
+        // maCouleur = prompt('Quelle est votre couleur préférée ?').toLowerCase();
+
+        // switch (true) {
+        //     case (maCouleur == 'bleu' && monAge >= 18):
+        //         alert('Vous êtes calme et réfléchi');
+        //         break
+        //     case (maCouleur == 'bleu' && monAge < 18):
+        //         alert('Les jeunes aiment aussi le bleu');
+        //         break
+        //     case (maCouleur == 'rouge'):
+        //         alert('Vous êtes passionné et dynamique');
+        //         break
+        //     case (maCouleur == 'vert'):
+        //         alert('Vous aimez la nature et la tranquilité');
+        //         break
+        //     default:
+        //         alert('Couleur non reconnue');
+        // };
+
+        // SWITCH PREDICTIONS
+
+        let chiffreChance;
+        chiffreChance = parseFloat(prompt('Donnez un chiffre de 1 à 5'));
+
+        switch (true) {
+            case (chiffreChance == 1):
+                alert("Aujourd'hui est votre jour de chance");
+                break;
+            case (chiffreChance == 2):
+                alert("Un ami vous rendra visite bientôt...");
+                break;
+            case (chiffreChance == 3):
+                alert("Soyez prudent dans vos choix aujourd'hui");
+                break;
+            case (chiffreChance == 4):
+                alert("Une surprise vous attend au coin de la rue");
+                break;
+            case (chiffreChance == 5):
+                alert("Restez positif. Le meilleur est à venir");
+                break;
+            default:
+                alert('Chiffre non valide, donnez un chiffre de 1 à 5');
+                break;
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

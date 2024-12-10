@@ -98,7 +98,108 @@
             document.write(`Résultat de l'addition du ${nombre1} + ${nombre2} est égale à ${resultat}`);
         }
 
-        addition(4, 10);
+        addition(5, 10);
+
+        // Protection des fonctions 
+        function direSalut(prenomSalut = '') {
+            document.write(`<p>Salut ${prenomSalut} </p> `);
+        }
+
+        direSalut();
+
+        // Création d'une fonction comme raccourci de document.write()
+
+        const D = (content, balise) => {
+            if (balise === 1) {
+                document.write(`<h2>${content}</h2>`)
+            } else {
+                document.write(`<p>${content}</p>`)
+            }
+
+        }
+
+        D('titre', 1);
+
+        // Fonctions avec le mot clé "Return" (Retourne une valeur) 
+
+        function calculeAge(anneeActuelle, anneeNaissance) {
+            return anneeActuelle - anneeNaissance;
+        }
+
+        let monAge = calculeAge(2024, 1984);
+
+        D(monAge, 1);
+
+        // Il existe une autre façon pour déclarer une fonction. 
+        // fonction fléchée : les accolades ne sont pas nécessaire s'il n'y a qu'une instruction
+        // flèche => sert implicitement de RETURN;
+
+        let maFonction2 = (x, y) => {
+            D(x + y);
+        }
+
+        maFonction2(5, 2);
+
+
+        let maFonction3 = (f, r) => f * r;
+        let produit = maFonction3(6, 5);
+
+        D(produit);
+
+        document.write(HR);
+
+        D('La portée des variables', 1);
+
+        /* 
+        En JavaScript, la portée des variablers définit à quel endroits dans le code est accessible. Il existe principalement trois types de portée : 
+
+        Portée globale (global scope)
+        Portée locale (local scope)
+        Portée bloc (block scope)
+
+        1. Portée globale (global scope) 
+        Une variable déclarée en dehors de toute fonction ou bloc a une portée globale. Cela signifie qi'emme est accessible depuis n'importe quelle partie du code. 
+
+        Exemple : 
+
+        */
+
+        let message = 'Hello, world!'; // variable globale 
+
+        let afficherMessage = () => D(message);
+        afficherMessage(); // Accés à la variable globale
+
+        // Dans cet exemple, la variable message est designée en dehors de la fonction. Elle est donc accessible partout dans le programme. C'est donc une variable globale. 
+
+        /* 
+        2. Portée locale ou fonctionnelle (local scope)
+        Une variable déclarée à l'intérieur d'une fonction est accessible niquement à l'intérieur de la fonction. Elle une portée locale
+
+        Exemple : 
+
+        */
+
+        function saluer() {
+            let nom = 'Delma'; // Variable locale à la fonction
+            D('Salut ' + nom);
+        }
+
+        saluer();
+
+        // console.log(nom); // Erreur : not defined car c'est une variable locale (dans la fonction)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

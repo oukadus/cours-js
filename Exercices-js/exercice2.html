@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Js</title>
+</head>
+
+<body>
+
+    <script>
+
+        // exo 1
+
+        const SEPARATOR = '<br><br><hr><br>';
+
+        let saluer = (nom) => {
+            document.write(`Bonjour, ${nom}`);
+        };
+
+        saluer('Kader');
+
+        // exo 2
+
+        let somme = (valeur1, valeur2) => {
+            document.write(SEPARATOR, valeur1 + valeur2);
+        };
+
+        somme(2, 10);
+
+        document.write(SEPARATOR);
+
+        // exo 3 
+
+        let estPair = (nombre) => {
+            if ((nombre % 2) == 0) {
+                document.write(`${nombre} est pair !`);
+            } else {
+                document.write(`${nombre} est impair !`);
+            }
+        };
+
+        estPair(115);
+
+        document.write(SEPARATOR);
+
+        // exo 4
+
+        let compterVoyelles = (maString) => {
+            let compteur = 0;
+            for (i = 0; i < maString.length; i++) {
+                if ((maString[i] == 'a') || (maString[i] == 'e') || (maString[i] == 'i') || (maString[i] == 'o') || (maString[i] == 'u') || (maString[i] == 'y')) {
+                    compteur++
+                } else {
+                    compteur += 0;
+                }
+            };
+            document.write(`voici le nombre de voyelles de votre chaine de caractères : ${compteur} `);
+        }
+
+        compterVoyelles('Kader');
+
+        document.write(SEPARATOR);
+
+        // exo 5
+
+        let inverserChaine = (chaine) => {
+            for (i = chaine.length - 1; i >= 0; i--) {
+                document.write(`${chaine[i]}`);
+            };
+        }
+
+        inverserChaine('Kader');
+
+
+        document.write(SEPARATOR);
+
+        // exo 6
+
+        let trouverMax = (myArray) => {
+            let max = Math.max(...myArray)
+            document.write(`le plus grand nombre est ${max}`);
+        }
+
+        trouverMax([32, 3, 6, 40, 24]);
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
