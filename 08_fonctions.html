@@ -179,19 +179,46 @@
 
         */
 
+        let gilbert = 'Gilbert';
+
         function saluer() {
-            let nom = 'Delma'; // Variable locale à la fonction
-            D('Salut ' + nom);
+            gilbert = 'Laurent';
+            let nom = 'Leta'; // Variable locale à la fonction
+            var prenom = 'Delma';
+            D('Salut ' + prenom + ' ' + nom);
+            console.log(gilbert);
         }
 
         saluer();
-
+        console.log(gilbert);
         // console.log(nom); // Erreur : not defined car c'est une variable locale (dans la fonction)
 
 
 
+        /* 
+        3. Portée de bloc (Block Scope)
+        Les déclarations de variables avec "let" et "var" 
 
 
+        */
+
+        if (true) {
+            let x = 10;
+            const Y = 20;
+            var z = 30;
+            console.log(x, Y); // Affiche les valeurs de la variable et constante
+
+        }
+
+        // console.log(x, Y); // Erreur x || y is not defined 
+
+        // Dans cet exemple x et Y sont déclérés avec let et const dans le bloc "if". Il ne sont accessibles que dans ce bloc
+
+        console.log(z); // Affiche la valeur de la variable z et donc cette variable est accessible en dehors du bloc. Le mot clé "var" ignore la portée de bloc mais reste limité par la portée de fonction(locale) 
+
+        // console.log(prenom); // la variable déclarée avec 'var' is not defined 
+
+        console.log(gilbert);
 
 
 
