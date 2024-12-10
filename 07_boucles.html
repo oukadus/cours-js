@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boucles</title>
+</head>
+
+<body>
+
+    <script>
+        const HR = '<hr>';
+        document.write('<h1>Les boucles</h1>');
+
+        /*
+        Une boucle est une structure conditionnelle qui permet de répéter un certain nombre de fois du code. 
+        Jusqu'à ce que le test ne soit plus VRAI (true)
+        */
+
+        /*
+        Il existe deux principaux types de boucles : 
+        * La boucle "for" permet de répéter du code lorsque l'on sait d'avance combien de fois il faudra le répéter.
+
+        * La boucle "While" permet de répéter du code autant de fois qu'il faut pour qu'une condition ne soit plus VRAI (true)
+
+        */
+
+        document.write('<h2> La boucle "for" </h2>');
+
+        /*
+            syntaxe 
+
+            for (3 arguments : initialisation; condition de continuation ; incrémentaion){ 
+            
+             code à exécuter;
+
+            }
+
+        */
+
+        for (let i = 0; i <= 10; i++) {
+            document.write(`<p> instruction executée ${i}</p>`)
+        }
+
+        /*
+
+        i = 0   -> j'initialise le départ de la boucle à 0 
+        i <= 10 -> tant que la valeur de i est inférieur ou égale à 10 
+        i++     -> J'incrémente un tour de la boucle 
+
+        En gros, je donne l'instruction de faire un tour de boucle supplémentaire tant que la valeur de i est inférieur ou égale à 10
+
+        */
+
+
+        document.write(HR)
+        for (let i = 10; i >= 0; i--) {
+            document.write(`<p>Je compte deux par deux le ${i}</p>`)
+        };
+
+        // Boucle sur tableau (array)
+
+        let users = ['Hawa', 'Andrea', 'Alpha', 'Islem', 'Roger'];
+        console.log(users[0]);
+
+        document.write(HR);
+
+        for (let i = 0; i < users.length; i++) {
+            document.write(`<p>${users[i]}</p>`);
+        };
+
+        document.write('<h2> La boucle "while" </h2>');
+
+
+        let i = 0; // J'initialise une variable à 0 
+        while (i <= 5) { // tant que i est inférieur ou égale à 5
+
+            document.write(i + '/');
+
+
+            // Attention à ne pas oublier l'incrémentation 
+            i++; // à chaque tour de la boucle, j'incrémente la variable i
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -270,21 +270,68 @@
 
         // est-ce que meteo est égale à pluie ? IF oui, prends un parapluie : ELSE Mets un short
 
-        let monAge = prompt('Vôtre âge ?');
-        let isMajor;
-        isMajor = (monAge >= 18) ? '<p>Vous êtes majeur</p>' : '<p>Vous n\'êtes pas majeur</p>';
-        document.write(isMajor);
+        // let monAge = prompt('Vôtre âge ?');
+        // let isMajor;
+        // isMajor = (monAge >= 18) ? '<p>Vous êtes m20ajeur</p>' : '<p>Vous n\'êtes pas majeur</p>';
+        // document.write(isMajor);
 
-        document.write(HR);
+        // document.write(HR);
 
         // age < 13 => Rentres chez toi petit 
         // age < 18 => Tu n'as pas le droit de boire   
         // age >= 18 => Tu as le droit de boire
 
-        let droitBoire;
-        droitBoire = (monAge < 13) ? 'Rentres chez toi petit' : (monAge < 18) ? "tu n'as pas le droit de boire" : "Tu as le droit de boire";
+        // let droitBoire;
+        // droitBoire = (monAge < 13) ? 'Rentres chez toi petit' : (monAge < 18) ? "tu n'as pas le droit de boire" : "Tu as le droit de boire";
 
-        document.write(droitBoire);
+        // document.write(droitBoire);
+
+        let age;
+        age = parseInt(prompt("vôtre âge :"));
+        console.log(age, typeof age);
+
+        // if (isNaN(age) || age <= 0) {
+        //     alert('veuillez entrer un âge valide');
+        // } else if (age <= 13) {
+        //     alert('Tu es encore trop jeune pour participer.');
+        // } else if (age >= 13 && age < 18) {
+        //     alert('il est encore temps pour pouvoir participer');
+        // } else if (age >= 18 && age <= 55) {
+        //     alert('Bienvenue dans la catégorie Jeune Adulte');
+        // } else {
+        //     alert('Merci pour votre intérêt, mais cette activité est réservée aux jeunes')
+        // }
+
+        // --------------------------- 
+        //       SWITCH / CASE
+        //----------------------------
+
+        /* 
+        La condition switch réponds à des cas bien spécifiques.
+        Vous pouez écrire chaque condition à l'intérieur d'un CASE. 
+        Séparer chaque CASE par un BREAK qui stop la condition. 
+        */
+
+
+        if (isNaN(age) || age <= 0) {
+            alert('veuillez entrer un âge valide');
+        } else {
+            switch (true) {
+                case (age < 13):
+                    alert('Tu es encore trop jeune pour participer.');
+                    break
+                case (age >= 13 && age > 18):
+                    alert('il est encore temps pour pouvoir participer');
+                    break
+                case (age >= 18 && age <= 30):
+                    alert('Bienvenue dans la catégorie Jeune Adulte');
+                    break
+                default:
+                    alert('Merci pour votre intérêt, mais cette activité est réservée aux jeunes');
+            }
+        }
+
+
 
 
     </script>

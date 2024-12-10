@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctions</title>
+</head>
+
+<body>
+
+    <script>
+
+        const HR = '<hr>';
+        const BR = '<br>';
+
+        document.write('<h2>Fonctions prédéfinies & utilisateur</h2>');
+
+        // JS posséde des fonctions. Ce sont des morceaux de codes encapsulés qu'on appel au besoin afin d'exécuter une action précise.  On distingue les fonctions prédéfinis et les fonctions utilisateurs. 
+
+        document.write('<h3>Fonctions prédéfinies</h3>');
+
+        // ----- 1)- Fonctions prédéfinis sur des nombres ------ 
+        let testNumber = 1.5555555;
+        document.write(typeof testNumber);
+        let number = testNumber.toFixed(2);
+        document.write(BR, typeof number + ' ' + number);
+
+        // toFixed() défini un nombre de chiffres après la virgule et retourne une chaine de caractère (String)
+
+
+        document.write(BR, typeof parseFloat(number), HR, BR);
+
+        // let testMath = Math.pow(2, 2); // puissance
+        // let testMath = Math.PI // PI
+        // let testMath = Math.floor(1.9); // Nombre entier inférieur
+        // let testMath = Math.ceil(1.9); //Nombre entier supérieur
+        // let testMath = Math.max(10, 8, 14, 50, 6); // retourn la valeur la  plus grande
+        // let testMath = Math.min(10, 8, 14, 50, 6); // retourne la valeur la plus petite
+        // let testMath = Math.random(); // retourne la valeur décimal entre 0 et 1, qui change à chaque raffraichissement de la page. 
+
+
+        // Je veux un nombre entier entre 0 et 100 de façon aléatoire
+
+        let nombre = Math.random() * 100;
+        document.write(Math.round(nombre), BR, HR); // Arrondi au supérieur ou inférieur selon les nombres après la virgule.
+
+        // ----- 2)- Fonctions prédéfinis sur des String ------ 
+        let phrase = 'Salut Kader'
+        document.write(phrase.length, BR); // retourne le nombre de caractère d'une string ou d'un array
+        document.write(phrase.indexOf('K'), BR); // retourne l'index de l'argument placé en paramètre de la fonction. 
+        document.write(phrase.toUpperCase(), BR) // retourne la phrase au majuscule
+        document.write(phrase.toLowerCase(), BR) // retourne la phrase au majuscule
+
+        let phrase2 = '      Salut           Kader            ';
+        let sansEspace = phrase2.trim();
+        console.log(phrase2);
+        console.log(sansEspace);
+
+        // la fonction "trim()" permet de retirer les espaces avant et après. 
+
+        let phrase3 = 'métro | boulot | dodo';
+        console.log(phrase3.split('|', 2));
+
+        document.write('<h3>Fonctions utilisateurs</h3>');
+        // un des grands principes en programmation est d'avoir un code DRY (Don't Repeat Yourself) 
+
+        // ------ Déclaration d'une fonction ou initialisation d'une fofonction 
+
+        function maFonction() {
+            document.write(`<p>Ma première fonction</p>`)
+        }
+
+        // Appel (exécution) de la fonction 
+        maFonction();
+
+        // Autre syntaxe
+        // Cela consiste à assigner une fonction à une variable
+
+        let direBonjour = function (prenom, nom) {
+            document.write(`<p>Bonjour ${prenom} ${nom}</p>`)
+        }
+
+        direBonjour('Kader', 'Ounadjela');
+
+        // Fonction fléchée
+
+        const myFunction = (prenom, nom) => {
+            document.write(`<p>Bonjour ${prenom} ${nom}</p>`)
+        }
+
+        myFunction('Alex', 'Graz');
+
+        // Fonction de calcule 
+
+        function addition(nombre1, nombre2) {
+            let resultat = nombre1 + nombre2;
+            document.write(`Résultat de l'addition du ${nombre1} + ${nombre2} est égale à ${resultat}`);
+        }
+
+        addition(4, 10);
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
