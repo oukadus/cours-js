@@ -33,17 +33,17 @@
         } else if ((operateur !== '+') && (operateur !== '-') && (operateur !== '*') && (operateur !== '/') && (operateur !== '%')) {
             alert('Veuillez entrer un opérateur valide !')
         } else if (operateur == '+') {
-            alert("Le résultat de " + nombre1 + " + " + nombre2 + " est " + Math.round(nombre1 + nombre2))
+            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 + nombre2)}`)
         } else if (operateur == '-') {
-            alert("Le résultat de " + nombre1 + " - " + nombre2 + " est " + Math.round(nombre1 - nombre2))
+            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 - nombre2)}`)
         } else if (operateur == '*') {
-            alert("Le résultat de " + nombre1 + " * " + nombre2 + " est " + Math.round(nombre1 * nombre2))
+            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 * nombre2)}`)
         } else if ((operateur == '/') && (nombre2 == 0)) {
             alert("Division par zéro impossible !")
         } else if (operateur == '/') {
-            alert("Le résultat de " + nombre1 + " / " + nombre2 + " est " + Math.round(nombre1 / nombre2))
+            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 / nombre2)}`)
         } else if ((operateur == '%')) {
-            alert("Le résultat de " + nombre1 + " % " + nombre2 + " est " + Math.round(nombre1 % nombre2))
+            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 % nombre2)}`)
         }
 
     </script>
