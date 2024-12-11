@@ -1,5 +1,5 @@
-let test = 12.5;
+let number1 = "24,5";
 
-test = parseInt(test);
+number1 = parseFloat(number1.replace(",", "."));
 
-console.log(test);
+console.log(number1);

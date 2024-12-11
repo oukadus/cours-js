@@ -18,13 +18,14 @@
         let nombre2;
         let operateur;
 
-        nombre1 = parseFloat(prompt('Quel votre premier nombre ?'));
-        nombre2 = parseFloat(prompt('Quel votre deuxième nombre ?'));
+        nombre1 = prompt('Quel votre premier nombre ?');
+        nombre2 = prompt('Quel votre deuxième nombre ?');
         operateur = prompt('Quelle opération souhaitez vous');
 
 
-        nombre1 = nombre1.replace(',', '.');
-        nombre2 = nombre2.replace(',', '.');
+        nombre1 = parseFloat(nombre1.replace(',', '.'));
+        nombre2 = parseFloat(nombre2.replace(',', '.'));
+
 
 
         if (isNaN(nombre1) || isNaN(nombre2)) {
