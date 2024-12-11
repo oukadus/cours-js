@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculatrice</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
         nombre1 = prompt('Quel votre premier nombre ?');
         nombre2 = prompt('Quel votre deuxième nombre ?');
-        operateur = prompt('Quelle opération souhaitez vous');
+        operateur = prompt('Quelle opération souhaitez vous exécuter ?');
 
 
         nombre1 = parseFloat(nombre1.replace(',', '.'));
@@ -32,16 +32,18 @@
             alert('Veuillez entrer un nombre valide !')
         } else if ((operateur !== '+') && (operateur !== '-') && (operateur !== '*') && (operateur !== '/') && (operateur !== '%')) {
             alert('Veuillez entrer un opérateur valide !')
-        } else if ((operateur == '+')) {
-            alert("Le résultat de " + nombre1 + " + " + nombre2 + " est " + (nombre1 + nombre2))
-        } else if ((operateur == '-')) {
-            alert("Le résultat de " + nombre1 + " - " + nombre2 + " est " + (nombre1 - nombre2))
-        } else if ((operateur == '*')) {
-            alert("Le résultat de " + nombre1 + " * " + nombre2 + " est " + (nombre1 * nombre2))
-        } else if ((operateur == '/')) {
-            alert("Le résultat de " + nombre1 + " / " + nombre2 + " est " + (nombre1 / nombre2))
+        } else if (operateur == '+') {
+            alert("Le résultat de " + nombre1 + " + " + nombre2 + " est " + Math.round(nombre1 + nombre2))
+        } else if (operateur == '-') {
+            alert("Le résultat de " + nombre1 + " - " + nombre2 + " est " + Math.round(nombre1 - nombre2))
+        } else if (operateur == '*') {
+            alert("Le résultat de " + nombre1 + " * " + nombre2 + " est " + Math.round(nombre1 * nombre2))
+        } else if ((operateur == '/') && (nombre2 == 0)) {
+            alert("Division par zéro impossible !")
+        } else if (operateur == '/') {
+            alert("Le résultat de " + nombre1 + " / " + nombre2 + " est " + Math.round(nombre1 / nombre2))
         } else if ((operateur == '%')) {
-            alert("Le résultat de " + nombre1 + " % " + nombre2 + " est " + (nombre1 % nombre2))
+            alert("Le résultat de " + nombre1 + " % " + nombre2 + " est " + Math.round(nombre1 % nombre2))
         }
 
     </script>
