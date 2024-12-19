@@ -80,33 +80,51 @@
 
         // CALCULATRICE
 
-        // let nombre1;
-        // let nombre2;
-        // let operateur;
+        //    let nombre1;
+        //     let nombre2;
+        //     let operateur;
 
-        // nombre1 = parseInt(prompt('Quel votre premier nombre ?'));
-        // nombre2 = parseInt(prompt('Quel votre deuxième nombre ?'));
-        // operateur = prompt('Quelle opération souhaitez vous');
-
-        // nombre1.replace(',', '.');
-        // nombre2.replace(',', '.'); 
+        //     nombre1 = prompt('Quel votre premier nombre ?');
+        //     nombre2 = prompt('Quel votre deuxième nombre ?');
+        //     operateur = prompt('Quelle opération souhaitez vous exécuter ?');
 
 
-        // if (isNaN(nombre1) || isNaN(nombre2)) {
-        //     alert('Veuillez entrer un nombre valide !')
-        // } else if ((operateur !== '+') && (operateur !== '-') && (operateur !== '*') && (operateur !== '/') && (operateur !== '%')) {
-        //     alert('Veuillez entrer un opérateur valide !')
-        // } else if ((operateur == '+')) {
-        //     alert("Le résultat de " + nombre1 + " + " + nombre2 + " est " + (nombre1 + nombre2))
-        // } else if ((operateur == '-')) {
-        //     alert("Le résultat de " + nombre1 + " - " + nombre2 + " est " + (nombre1 - nombre2))
-        // } else if ((operateur == '*')) {
-        //     alert("Le résultat de " + nombre1 + " * " + nombre2 + " est " + (nombre1 * nombre2))
-        // } else if ((operateur == '/')) {
-        //     alert("Le résultat de " + nombre1 + " / " + nombre2 + " est " + (nombre1 / nombre2))
-        // } else if ((operateur == '%')) {
-        //     alert("Le résultat de " + nombre1 + " % " + nombre2 + " est " + (nombre1 % nombre2))
-        // }
+        //     nombre1 = parseFloat(nombre1.replace(',', '.'));
+        //     nombre2 = parseFloat(nombre2.replace(',', '.'));
+
+
+
+        //     if (isNaN(nombre1) || isNaN(nombre2)) {
+        //         alert('Veuillez entrer un nombre valide !')
+        //     }
+
+        //     else if (operateur == '+') {
+        //         alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 + nombre2)}`)
+        //     }
+
+        //     else if (operateur == '-') {
+        //         alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 - nombre2)}`)
+        //     }
+
+        //     else if (operateur == '*') {
+        //         alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 * nombre2)}`)
+        //     }
+
+        //     else if ((operateur == '/') && (nombre2 == 0)) {
+        //         alert("Division par zéro impossible !")
+        //     }
+
+        //     else if (operateur == '/') {
+        //         alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 / nombre2)}`)
+        //     }
+
+        //     else if ((operateur == '%')) {
+        //         alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 % nombre2)}`)
+        //     }
+
+        //     else {
+        //         alert('Veuillez entrer un opérateur valide !')
+        //     }
 
 
         // Deviner le bon nombre
@@ -128,7 +146,9 @@
         // Switch note
 
         // let note;
-        // note = parseFloat(prompt('Quelle est votre note ? '));
+        // note = prompt('Quelle est votre note ? ');
+
+        // note = parseFloat(note); 
 
         // if (isNaN(note)) {
         //     alert('Note invalide !');
@@ -155,7 +175,7 @@
         // SWITCH PLATS
 
         // let plat;
-        // plat = prompt('Quel est votre plat préféré (Pizza, Sushi, Steak, Salade)').toLocaleLowerCase();
+        // plat = prompt('Quel est votre plat préféré (Pizza, Sushi, Steak, Salade)').toLowerCase();
 
 
         // switch (true) {
@@ -203,22 +223,24 @@
         // SWITCH PREDICTIONS
 
         let chiffreChance;
-        chiffreChance = parseFloat(prompt('Donnez un chiffre de 1 à 5'));
+        chiffreChance = prompt('Donnez un chiffre de 1 à 5');
 
-        switch (true) {
-            case (chiffreChance == 1):
+        // chiffreChance = parseFloat(chiffreChance.replace(',', '.'));4
+
+        switch (chiffreChance) {
+            case 1:
                 alert("Aujourd'hui est votre jour de chance");
                 break;
-            case (chiffreChance == 2):
+            case 2:
                 alert("Un ami vous rendra visite bientôt...");
                 break;
-            case (chiffreChance == 3):
+            case 3:
                 alert("Soyez prudent dans vos choix aujourd'hui");
                 break;
-            case (chiffreChance == 4):
+            case 4:
                 alert("Une surprise vous attend au coin de la rue");
                 break;
-            case (chiffreChance == 5):
+            case 5:
                 alert("Restez positif. Le meilleur est à venir");
                 break;
             default:

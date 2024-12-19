@@ -23,20 +23,24 @@
 
         // exo 2
 
-        let somme = (valeur1, valeur2) => {
-            document.write(SEPARATOR, valeur1 + valeur2);
-        };
+        let somme = (valeur1, valeur2) => valeur1 + valeur2;
 
-        somme(2, 10);
+
+        document.write(SEPARATOR + 'Le résultat est de ' + somme(2, 10));
 
         document.write(SEPARATOR);
+
+
+
+
 
         // exo 3 
 
         let estPair = (nombre) => {
             if ((nombre % 2) == 0) {
                 document.write(`${nombre} est pair !`);
-            } else {
+            }
+            else {
                 document.write(`${nombre} est impair !`);
             }
         };
@@ -44,6 +48,13 @@
         estPair(115);
 
         document.write(SEPARATOR);
+
+
+
+
+
+
+
 
         // exo 4
 
@@ -78,12 +89,13 @@
 
         // exo 6
 
-        let trouverMax = (myArray) => {
-            let max = Math.max(...myArray)
-            document.write(`le plus grand nombre est ${max}`);
-        }
+        let trouverMax = (myArray) => Math.max(...myArray);
 
-        trouverMax([32, 3, 6, 40, 24]);
+
+
+
+        console.log(trouverMax([32, 3, 6, 40, 24]));
+
 
 
 

@@ -1,6 +1,50 @@
-.center {
+/* .center {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+} */
+
+#rouge,
+#orange,
+#bleu,
+#primary,
+#success {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+#rouge {
+  background-color: red;
+}
+
+#orange {
+  background-color: orange;
+}
+
+#bleu {
+  background-color: lightblue;
+}
+
+#primary {
+  background-color: var(--bs-primary);
+}
+
+.vert {
+  background-color: var(--bs-success);
+}
+
+.cercle {
+  background-color: gold !important;
+  border-radius: 50%;
+}
+
+.bouton {
+  cursor: pointer;
 }

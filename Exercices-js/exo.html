@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculatrice</title>
+    <title>Trouver le bon nombre</title>
 </head>
 
 <body>
@@ -12,39 +12,60 @@
     <script>
 
 
-        // CALCULATRICE
 
-        let nombre1;
-        let nombre2;
-        let operateur;
+        // exo 3 
+        // Créez une fonction estPair qui prend un nombre en paramètre et retourne true si le
+        // nombre est pair, sinon false.
 
-        nombre1 = prompt('Quel votre premier nombre ?');
-        nombre2 = prompt('Quel votre deuxième nombre ?');
-        operateur = prompt('Quelle opération souhaitez vous exécuter ?');
-
-
-        nombre1 = parseFloat(nombre1.replace(',', '.'));
-        nombre2 = parseFloat(nombre2.replace(',', '.'));
-
+        // let estPair = (nombre) => nombre % 2 === 0;
+        // if ((nombre % 2) == 0) {
+        //     return true;
+        // }
+        // else {
+        //     return false;
+        // }
 
 
-        if (isNaN(nombre1) || isNaN(nombre2)) {
-            alert('Veuillez entrer un nombre valide !')
-        } else if ((operateur !== '+') && (operateur !== '-') && (operateur !== '*') && (operateur !== '/') && (operateur !== '%')) {
-            alert('Veuillez entrer un opérateur valide !')
-        } else if (operateur == '+') {
-            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 + nombre2)}`)
-        } else if (operateur == '-') {
-            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 - nombre2)}`)
-        } else if (operateur == '*') {
-            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 * nombre2)}`)
-        } else if ((operateur == '/') && (nombre2 == 0)) {
-            alert("Division par zéro impossible !")
-        } else if (operateur == '/') {
-            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 / nombre2)}`)
-        } else if ((operateur == '%')) {
-            alert(`Le résultat de ${nombre1} ${operateur} ${nombre2} est ${Math.round(nombre1 % nombre2)}`)
+
+
+        // document.write(estPair(110));
+
+        // document.write(SEPARATOR);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // exo 5
+
+        let inverserChaine = (chaine) => {
+            let myString = '';
+            for (i = chaine.length - 1; i >= 0; i--) {
+                myString += chaine[i];
+            };
+            return myString
         }
+
+        console.log(inverserChaine('Kader'));
+
+
+
+
+
+
+
+
+
+
 
     </script>
 
