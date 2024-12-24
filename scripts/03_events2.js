@@ -5,20 +5,20 @@ const PRIMARY = document.querySelector("#primary");
 const SUCCESS = document.querySelector("#success");
 
 let colors = ["ROUGE", "ORANGE", "BLEU", "PRIMARY", "SUCCESS"];
-let colours = [ROUGE, ORANGE, BLEU, PRIMARY, SUCCESS];
+let myElements = [ROUGE, ORANGE, BLEU, PRIMARY, SUCCESS];
 
-function colorsEvent(myColour, myColor) {
-  myColour.classList.toggle("cercle");
-  if (myColour.textContent === "GOLD") {
-    myColour.textContent = myColor;
+function colorsEvent(myElement, myColor) {
+  myElement.classList.toggle("cercle");
+  if (myElement.textContent === "GOLD") {
+    myElement.textContent = myColor;
   } else {
-    myColour.textContent = "GOLD";
+    myElement.textContent = "GOLD";
   }
 }
 
-for (let i = 0; i < colours.length; i++) {
-  colours[i].addEventListener("click", () =>
-    colorsEvent(colours[i], colours[i])
+for (let i = 0; i < myElements.length; i++) {
+  myElements[i].addEventListener("click", () =>
+    colorsEvent(myElements[i], colors[i])
   );
 }
 // -------------------------------

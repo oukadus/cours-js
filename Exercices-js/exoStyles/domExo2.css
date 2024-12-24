@@ -1,0 +1,19 @@
+.rectangle {
+  height: 300px;
+  width: 400px;
+  background-color: lightblue;
+  transition: ease-in-out 300ms;
+}
+
+.hidden {
+  display: none;
+  /* visibility: hidden; */
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
