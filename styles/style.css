@@ -48,3 +48,16 @@
 .bouton {
   cursor: pointer;
 }
+
+#validationFormulaire {
+  border: 2px solid indigo;
+}
+
+#validationFormulaire,
+#validationFormulaire form fieldset {
+  margin: 1rem 0;
+}
+
+form {
+  padding: 1rem;
+}

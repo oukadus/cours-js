@@ -15,7 +15,7 @@
 <body>
 
     <header>
-        <div class="bg-light rounded-3 p-5">
+        <div class="bg-info rounded-3 p-5 mb-3">
             <div class="container-fluid py-5">
 
                 <h1 class="fw-bold display-3 fs-2">Cours sur les évenements en JavaScript</h1>
@@ -91,6 +91,60 @@
             </div>
             <div class="col-4">
                 <div id="success" class="vert">SUCCESS</div>
+        </section>
+
+        <!-- VALIDATION DE FORMULAIRE -->
+
+        <section id="validationFormulaire">
+            <form action="" method="">
+                <!-- Champ prénom -->
+                <div class="col">
+                    <label for="prenom">Votre prénom</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="saisissez votre prénom">
+
+                    <!-- Langages -->
+
+                    <h6 class="my-3">Langages</h6>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="langage" type="checkbox" id="html" value="html">
+                        <label class="form-check-label" for="html">HTML</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="langage" type="checkbox" id="css" value="css">
+                        <label class="form-check-label" for="css">CSS</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="langage" type="checkbox" id="js" value="JavaScript">
+                        <label class="form-check-label" for="js">Js</label>
+                    </div>
+                    </fieldset>
+
+                    <!-- Boutons Radio -->
+                    <h6 class="my-3">Acquisition</h6>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="acquisition" type="radio" id="acquis" value="acquis">
+                        <label class="form-check-label" for="acquis">Acquis</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="acquisition" type="radio" id="enCours"
+                            value="En cours d'acquisition">
+                        <label class="form-check-label" for="enCours">En cours d'acquisition</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" name="acquisition" type="radio" id="nonAcquis"
+                            value="Non Acquis">
+                        <label class="form-check-label" for="nonAcquis">Non Acquis</label>
+                    </div>
+            
+                </div>
+
+                <div class="p-2 mt-4">
+                    <button type="submit" id="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+
+
+            </form>
+
         </section>
     </main>
 
